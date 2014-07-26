@@ -7,7 +7,7 @@ tags: [about, Jekyll, theme, responsive]
 modified: 9-9-2013
 comments: true
 image:
-  feature: texture-feature-02.jpg
+  feature: aboutpage_theme.jpg
   credit: Texture Lovers
   creditlink: http://texturelovers.com
 ---
