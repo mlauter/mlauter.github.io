@@ -1,15 +1,15 @@
 ---
 layout: page
 permalink: /Resume/
-title: About the Theme
+title: Resume
 tagline: Minimal Mistakes, a Jekyll Theme
 tags: [about, Jekyll, theme, responsive]
-modified: 7-24-2014
+modified: 7-25-2014
 comments: true
 image:
-  feature: texture-feature-02.jpg
+  feature: resumepage_theme.jpg
   credit: Texture Lovers
   creditlink: http://texturelovers.com
 ---
 
-Put stuff here
+Coming soon... for now, the pdf <a href="https://drive.google.com/file/d/0B27uq65Sl6LrMGQ3YlBqb3I5Y00/edit?usp=sharing"> <i class="fa fa-download"></i></a>
