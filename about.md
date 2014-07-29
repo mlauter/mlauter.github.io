@@ -10,6 +10,7 @@ comments: true
   feature: aboutpage_theme.jpg
   credit: Texture Lovers
   creditlink: http://texturelovers.com
- -->---
+ -->
+---
 
 ## About the Blog

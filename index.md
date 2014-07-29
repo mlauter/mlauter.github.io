@@ -6,4 +6,5 @@ tags: [Jekyll, theme, responsive, blog, template]
   feature: homepage_texture.jpg
   credit: Texture Lovers
   creditlink: http://texturelovers.com
- -->---
+ -->
+---
