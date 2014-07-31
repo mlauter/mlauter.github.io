@@ -2,7 +2,7 @@
 layout: post
 title: "Things I didn't understand before this week but now understand (at least somewhat) : Timsort"
 description: My first venture into the python source code
-modified: 2014-07-29 12:33:45 -0400
+modified: 2014-07-31 1:22:45 -0400
 category: []
 tags: [TIDUBTWBNU/AS, python, cpython, source code, sorting]
 image:
