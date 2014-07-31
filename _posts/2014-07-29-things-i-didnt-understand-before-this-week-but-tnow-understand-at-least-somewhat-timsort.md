@@ -25,7 +25,7 @@ What I wanted to know, though, was how does this actually work?
 <br />
 I don’t know any C, but handily, within the CPython source code, there is a text file written by Tim Peters, explaining his eponymous function. Here is what I learned.
 
-1. If the array that you are trying to sort has fewer than 64 elements, Timsort will simply do a **binary insertion sort**.
+### 1. If the array that you are trying to sort has fewer than 64 elements, Timsort will simply do a **binary insertion sort**.
 
    In a normal insertion sort, you would start with the first element of the array and check it against the next item over. If the first item is greater than the second, you flip them, otherwise, you leave them where they are. Now you know your first two items are sorted, so you move on to the third item. You then figure out where the third item belongs by checking from right to left. If item 3 is larger than the preceeding item, you can leave it where it is. Otherwise, you need to check the first item. You continue on down the array until you've placed each item in its proper location.
 
@@ -35,7 +35,7 @@ I don’t know any C, but handily, within the CPython source code, there is a te
 
 
 
-2. The notion of "**runs**"
+### 2. The notion of "**runs**"
 
    The **run** is a very important concept for Timsort. If you have an array longer    than 64 elements, the algorithm will take a first pass through the array checking    for chunks that are stricty increasing or strictly decreasing (if the chunk is    decreasing, it will be reversed). 
    
@@ -45,7 +45,7 @@ I don’t know any C, but handily, within the CPython source code, there is a te
    
    ![An array with consecutive, descending runs, a, b, and c](../images/timsort_list_image.jpg)
 
-3. Merging
+### 3. Merging
 
    The next step is to merge sort your sorted chunks. We are only allowed to merge    agacent chunks so that items do not get out of order with respect to the    intervening chunks. One important property of Timsort is that it is *stable*,    meaning that items of equal value remain sorted in order with respect to their    original positions in the list. (I'll come back to this later).
    
@@ -56,11 +56,11 @@ I don’t know any C, but handily, within the CPython source code, there is a te
    Timsort tries to balance two competing needs when merging runs. On the one hand,    we want to put off merging chunks in case it turns out merging our current run    with the next run would be better than (more efficient than) merging with the    previous run. On the other hand, we don't want to let the stack get too big,    because then we'll have to reach really far down to get those earlier items, which    would hinder performance. To enforce a compromise, Timsort keeps track of the    three most recent items on the stack and creates two laws that must hold true of    those items:
    
    >>1. a > b+c
-   2. b > c 
+   >>2. b > c 
    
    If either of these laws are broken when a new run is pushed to the stack, items    are merged. If a is larger than c, a and b are merged, otherwise b and c are merged   .
    
-4. Timrun's merge sort
+### 4. Timrun's merge sort
 
    Normal merge sort (recall that our runs are already sorted within, so you can skip    to 3:25 in the video):
    
@@ -74,7 +74,7 @@ I don’t know any C, but handily, within the CPython source code, there is a te
    
    Actually, what Timsort does is slightly more complicated than this, which brings    me to the last point:
    
-5. Galloping
+### 5. Galloping
 
    ![galloping](http://upload.wikimedia.org/wikipedia/commons/d/dd/Muybridge_race_horse_animated.gif)
 
@@ -87,6 +87,7 @@ I don’t know any C, but handily, within the CPython source code, there is a te
    It turns out, this operation is not worth it if the appropriate location for b[0]    is very close to the beginning of a (or vice versa), so gallop mode quickly exits    if it isn't paying off. Additionally, Timsort takes note, and makes it harder to    enter gallop mode later by increasing the number of consecutive a-only or b-only    wins required to enter. If gallop mode _is_ paying off, Timsort makes it easier to    reenter. 
    
 
+<br />
 And there you have it, Timsort.
 
 An interesting note: Though Timsort's great performance on arrays with some preexisting internal sorting is its best-known feature, it seems like having a stable sort was one of the main motivators behind adopting timsort. Previously, in order to achieve a stable sort, you'd have to zip the items in your list up with integers, and sort it as an array of tuples. How irritating.
