@@ -15,3 +15,5 @@ comments: true
 
 
 ## About the Blog
+
+Coming soon
