@@ -55,7 +55,7 @@ I don’t know any C, but handily, within the CPython source code, there is a te
    
    Timsort tries to balance two competing needs when merging runs. On the one hand,    we want to put off merging chunks in case it turns out merging our current run    with the next run would be better than (more efficient than) merging with the    previous run. On the other hand, we don't want to let the stack get too big,    because then we'll have to reach really far down to get those earlier items, which    would hinder performance. To enforce a compromise, Timsort keeps track of the    three most recent items on the stack and creates two laws that must hold true of    those items:
    
-   >1. a > b+c
+   >>1. a > b+c
    2. b > c 
    
    If either of these laws are broken when a new run is pushed to the stack, items    are merged. If a is larger than c, a and b are merged, otherwise b and c are merged   .
