@@ -47,9 +47,9 @@ I don’t know any C, but handily, within the CPython source code, there is a te
 
 ### 3. Merging
 
-   The next step is to merge sort your sorted chunks. We are only allowed to merge    agacent chunks so that items do not get out of order with respect to the    intervening chunks. One important property of Timsort is that it is *stable*,    meaning that items of equal value remain sorted in order with respect to their    original positions in the list. (I'll come back to this later).
+   The next step is to merge sort your sorted chunks. We are only allowed to merge adjacent chunks so that items do not get out of order with respect to the intervening chunks. One important property of Timsort is that it is *stable*,    meaning that items of equal value remain sorted in order with respect to their original positions in the list. (I'll come back to this later).
    
-   As Timsort finds runs, it adds them to a stack (so an item seen first in the array    goes on first and is at the bottom of the stack).
+   As Timsort finds runs, it adds them to a stack (so an item seen first in the array goes on first and is at the bottom of the stack).
    
    ![the stack of runs](../images/timsort_stack_image.jpg)
    
