@@ -1,13 +1,2 @@
-<html>
-<head></head>
-    <body>
-        <pre>
+document.getElementbyId("center").innerHTML = "HackerSchool!";
 
-            // super secret invisible gadget
-            console.log("hello")
-            document.getElementbyId("center").innerHTML = "HackerSchool!";
-
-        </pre>
-    </body>
-
-</html>
