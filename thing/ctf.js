@@ -1,1 +1,1 @@
-document.querySelectorAll("center").innerHTML = "HackerSchool!";
+document.querySelectorAll("center").innerHTML = 'HackerSchool!';
