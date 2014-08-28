@@ -1,2 +1,2 @@
-document.getElementbyId("center").innerHTML = "HackerSchool!";
+document.getElementById("center").innerHTML = "HackerSchool!";
 
