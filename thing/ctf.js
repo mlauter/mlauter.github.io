@@ -1,2 +1,2 @@
 console.log("hi");
-document.getElementsByClassName("center")[0].innerHTML = 'HackerSchool!';
+document.getElementsByClassName("center")[0].innerHTML = 'Hacker School!';
