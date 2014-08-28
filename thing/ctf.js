@@ -1,2 +1,2 @@
 console.log("hi");
-document.querySelectorAll(".center").innerHTML = 'HackerSchool!';
+document.querySelectorAll("div.center").innerHTML = 'HackerSchool!';
