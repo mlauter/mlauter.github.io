@@ -39,9 +39,9 @@ The traceback coloring is almost done, so maybe I'll have a second accepted pull
 
 Before:
 
-![a wall of red text](../images/bpython3.jpg)
+![a wall of red text](../images/bpython3.png)
 
 After:
 
-![helpful colors](../images/bpython4.jpg)
+![helpful colors](../images/bpython4.png)
 
