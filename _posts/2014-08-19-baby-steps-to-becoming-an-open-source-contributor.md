@@ -5,7 +5,7 @@ description: First pull request accepted to bpython
 date: 2014-08-19T16:12:52-04:00
 tags: [python, bpython, open source, git, github, victory]
 ---
-*Update added, Sep 5, see the end of the post*
+*Update added, Sep 5, see the end of the post*<br>
 
 Last week, I made my first pull request to an open source project, and it was accepted! The project is called [bpython](http://bpython-interpreter.org/), and it's a "fancy interface to the Python interpreter." If you've ever used ipython, it's kind of like that, but with some nifty other features like in-line syntax highlighting and autocompletion suggestions that pop up as you type (read more about it on the website). You can find bpython on github as well. 
 
@@ -31,13 +31,13 @@ As I was working on implementing this feature, I was using bpython a lot to test
 
 So to sum up, if you want to contribute to an open source project, but you're intimidated, find someone you can bug with lots of questions, get your dev environment set up, find a small bug, fix the small bug. 
 
-The traceback coloring is almost done, so maybe I'll have a second accepted pull request to report soon.
+The traceback coloring is almost done, so maybe I'll have a second accepted pull request to report soon.<br>
 
 *Update: second pull request accepted. The latest version of bpython-curtsies now includes my colorful traceback/error messages. See the [pull request on github](https://github.com/bpython/bpython/pull/368).*
 
 Before:
-![a wall of red text]('images/bpython3.jpg')
+![a wall of red text]('../images/bpython3.jpg')
 
 After:
-![helpful colors]('images/bpython4.jpg')
+![helpful colors]('../images/bpython4.jpg')
 
