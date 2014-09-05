@@ -7,6 +7,7 @@ tags: [python, bpython, open source, git, github, victory]
 ---
 *Update added, Sep 5, see the end of the post*<br>
 
+
 Last week, I made my first pull request to an open source project, and it was accepted! The project is called [bpython](http://bpython-interpreter.org/), and it's a "fancy interface to the Python interpreter." If you've ever used ipython, it's kind of like that, but with some nifty other features like in-line syntax highlighting and autocompletion suggestions that pop up as you type (read more about it on the website). You can find bpython on github as well. 
 
 My contribution was a really tiny bug fix (like, one-line-of-code-tiny)--not really something worth writing a whole blog post about. Instead, I want to talk about how you can get started contributing to an open source project, even if you're a rank beginner like me. 
@@ -33,11 +34,14 @@ So to sum up, if you want to contribute to an open source project, but you're in
 
 The traceback coloring is almost done, so maybe I'll have a second accepted pull request to report soon.<br>
 
+
 *Update: second pull request accepted. The latest version of bpython-curtsies now includes my colorful traceback/error messages. See the [pull request on github](https://github.com/bpython/bpython/pull/368).*
 
 Before:
-![a wall of red text]('../images/bpython3.jpg')
+
+![a wall of red text](../images/bpython3.jpg)
 
 After:
-![helpful colors]('../images/bpython4.jpg')
+
+![helpful colors](../images/bpython4.jpg)
 
