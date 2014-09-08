@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Writing Snake in Python"
+title: "Writing Snake in python"
 description: You know you miss retro games
 date: 2014-09-07T21:41:03-04:00
 tags: retro games, pygame, procrastination, snake
