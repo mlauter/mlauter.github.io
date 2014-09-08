@@ -32,6 +32,7 @@ The [documentation](http://www.pygame.org/docs/) can be a little hard to get int
 1. blit the surface to the screen
   ``` screen.blit(my_surface,position)```
   `position` is a tuple defining the top left corner of your surface within the coordinates of your screen.
+  No idea why this operation is called 'blit', but what it's doing is copying a set of pixels onto another set of pixels. For example, copying the set of pixels representing your image (a Surface) onto the set of pixels that is your screen (another Surface).
 1. ``` pygame.display.flip()```
   This updates the visible display. you can also use ```python pygame.display.update()```, but the tutorial recommends `.flip()`.
 
