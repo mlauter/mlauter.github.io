@@ -270,7 +270,7 @@ def switch_state():
 
 In order to make the program on the Pi as simple as possible, I've decided to represent what I want the air conditioner to be doing in three different states. **1: Completely and totally OFF. 2: Completely and totally ON. 3: Trying to maintain a particular temperature**
 
-Because state 3 requires a temperature, I've represented all the states as a dictionary of {state number:?, temperature:?}, where the temperature is the empty string if we have state 1 or 2, or an integer (converted to a string) in farenheit for state 3. 
+Because state 3 requires a temperature, I've represented all the states as a dictionary of `{state number:?, temperature:?}`, where the temperature is the empty string if we have state 1 or 2, or an integer (converted to a string) in farenheit for state 3. 
 
 ~~~~~~
 #initialize desired_state to a dictionary 
@@ -398,7 +398,7 @@ def send_current_state():
 ~~~~~
 {: .language-python}
 
-We also need to decide what data to send to the server. Looking back at the code for our server, we need to send the current temperature in the room and  whether the air conditioner is on or off (We can get these values from the functions we just wrote). We also need to send the state_number and goal temperature that together represent the air conditioner's current state. *Note: I have a separate value for on or off so I can always know whether the air conditioner is on or off, even when the AC is acting as a thermostat.*
+We also need to decide what data to send to the server. Looking back at the code for our server, we need to send the current temperature in the room and  whether the air conditioner is on or off (We can get these values from the functions we just wrote). We also need to send the state number and goal temperature that together represent the air conditioner's current state. *Note: I have a separate value for on or off so I can always know whether the air conditioner is on or off, even when the AC is acting as a thermostat.*
 
 In order to keep track of the state of the air conditioner, I'm going to initialize a variable in the main loop of the program called `state`.
 
