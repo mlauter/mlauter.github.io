@@ -577,9 +577,10 @@ In order to keep a process running on the Pi even after you've closed your ssh s
 `nohup sudo python ac_ping.py`
 
 <p><br /></p>
-Now you have your own Smart AC!
 
-# Go make stuff!
+# Now you have your own Smart AC!
+
+Go make cool stuff!
 
 
 
