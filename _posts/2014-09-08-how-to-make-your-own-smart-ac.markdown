@@ -140,7 +140,7 @@ Continue following the [adafruit tutorial from above](https://learn.adafruit.com
 
 Once you've done that, here is the code you will use. I copied it directly into my own program. *Note: I noticed that for some reason, every time I wanted to restart my program, I had to cd into my device folder first, otherwise I'd get an error saying that the folder didn't exist.*
 
-~~~~~~
+```python
 import os
 import glob
 import time
@@ -169,8 +169,7 @@ def read_temp():
         temp_c = float(temp_string) / 1000.0
         temp_f = temp_c * 9.0 / 5.0 + 32.0
         return temp_c, temp_f
-~~~~~~
-{: .language-python}
+```
 
 That's it for the hardware side of this project. I'll return to the full program I have running on the Pi in Part III. 
 
