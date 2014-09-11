@@ -8,7 +8,7 @@ tags: internet of things, DIY, Raspberry Pi, Adafruit, beginner
 
 I originally wrote this post as a companion to my [Make your own Smart AC](../how-to-make-your-own-smart-ac) post for those who might want a bit more guidance setting up their Raspberry Pi. Everything in the post, however, is generally applicable, so if you're embarking on some other project, that's awesome too, and I hope my post can help.
 
-### Follow this [*adafruit tutorial*](https://learn.adafruit.com/adafruit-raspberry-pi-lesson-1-preparing-and-sd-card-for-your-raspberry-pi/downloading-an-image)
+### Follow this [adafruit tutorial<--](https://learn.adafruit.com/adafruit-raspberry-pi-lesson-1-preparing-and-sd-card-for-your-raspberry-pi/downloading-an-image)
 
 *The following are some tips that I would have found helpful to know while I was trying to set up my Raspberry Pi. If you already know what you're doing on that front, skip to the next section.*
 
@@ -20,10 +20,8 @@ I originally wrote this post as a companion to my [Make your own Smart AC](../ho
   * Click system report
   * If you are using the builtin SD card reader, click on Card Reader under hardware. If you're using a USB reader, click USB.
   * You should see the information about your SD card.
-  * Look for "BSD Name"
-
+  * Look for "BSD Name"<br />
   ![SDCardinfo](../images/SDcardinfo.png)
-
 1. Put the SD card into your raspberry pi's SD card slot (for the B+ this is on the underside)
 1. Either connect your computer to a keyboard and monitor as the tutorial suggests, or if you have a serial cable, connect the TX and RX of the cable to the RX and TX of the Pi. Checkout the [pinout map](http://www.element14.com/community/servlet/JiveServlet/previewBody/68203-102-6-294412/GPIO.png) below on the right to see where the RX and TX pins are located:
   ![serialcable](../images/serialcable.jpg)
@@ -43,9 +41,11 @@ Following this tutorial worked perfectly when I configured my Pi's wifi at Hacke
 1. Finally, I still had a DNS issue. To fix add the google nameservers to a file called resolv.conf:`Sudo nano /etc/resolv.conf`(Nano is a text editor in linux.) Add the follwing lines:
 
 <!-- ugh this looks super crappy -->
-    nameserver 8.8.8.8
-^
-    nameserver 8.8.4.4
+~~~~~
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+~~~~~
+{: .language-python}
 
 On your own computer, run nmap on your local computer to see if the Raspberry Pi is showing up on the network without ethernet (and get its new IP address). If the ip address of your computer is `192.168.1.3`, for example, take the first three bits of the address and then add .0/24 to map the 256 hosts between 192.168.10.0 and .255. `nmap -sP 192.168.1.0/24`
 

@@ -2,7 +2,7 @@
 layout: post
 title: "How to Make Your Own Smart AC"
 description: Or, the Internet of Things comes to my room. 
-date: 2014-09-08T19:56:51-04:00
+date: 2014-09-10T19:56:51-04:00
 tags: internet of things, home automation, DIY, instructable, raspberry pi, flask
 ---
 
@@ -74,6 +74,7 @@ Now the cool part. Inside the black box that is now between your air conditioner
 Make sure that your AC is always set to be 'on', we're bypassing the air conditioner's normal on/off control system. 
 
 Let's set that up. Consult the [pinout map](http://www.raspberry-projects.com/pi/wp-content/uploads/2014/09/rpi_model_b_plus_io_pinouts.jpg) for your Raspberry Pi. I find it useful to look at one that shows a picture of the Pi, so you can make sure you're oriented correctly.
+
 ![pinoutmap](../images/rpi_model_b_plus_io_pinouts.jpg)
 
 1. Make sure your Raspberry Pi is not plugged into power while you are working on this.
@@ -85,6 +86,7 @@ Let's set that up. Consult the [pinout map](http://www.raspberry-projects.com/pi
 1. Connect the power (wire from the GPIO pin) to _1: +in_ on the PowerSwitch, and your ground wire to _2: -in_. Ignore the spot labeled _3:Ground_ on the PowerSwitch. 
 1. You'll notice that on the face of the power switch with labels, there are some holes with screws in them. Use a small screw driver to adjust these screws such that your jumper wires are secured in the powerswitch and cannot be tugged out. 
 1. *Note: while you are testing, you don't need the power switch at all, just plug the wires into a breadboard and [use an LED](https://projects.drogon.net/raspberry-pi/gpio-examples/tux-crossing/gpio-examples-1-a-single-led/). If you can turn the light on and off, you can turn your AC on and off.*
+
 ![power switch plugged in](../images/powerswitch_connected.jpg)
 
 ### RPi-GPIO library
@@ -112,13 +114,13 @@ We will adapt this blinking light for controlling the relay later on. Note, in o
 
 ## Digital Temperature sensor
 
-Checkout [this tutorial](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing/hardware)
+Checkout [this tutorial](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing/hardware). The circuit diagram is slightly confusing so here is another I find easier to read:
 
-The circuit diagram is slightly confusing so here is another I find easier to read:
 ![temp sensor circuit](../images/RasPi_DS18B20.jpg)
 
-For testing, set this up on the circut board. You can send power and ground to the bus along the side.
+For testing, set this up on the circuit board. You can send power and ground to the bus along the side.
 
+<p><br /></p>
 When you set this up for real: 
 
 1. Take a sheet of PCB (it doesn't need to be large, so you can break off a piece if you want)
@@ -130,7 +132,7 @@ When you set this up for real:
 1. Use your hot glue gun to put a blob of glue over the blobs of solder. (Not strictly necessary, but a good thing to do).
 1. Use something to secure the cord of the temperature sensor to your circuit board (so that you don't end up putting a lot of strain on individual wires). I used a hairband.
 
-Here are some pictures of my circut, both top and bottom sides.
+Here are some pictures of my circuit, both top and bottom sides.
 ![my temp sensor circuit](../images/tempsensorcircuit_frontback.jpg)
 
 ### The code
@@ -202,7 +204,7 @@ def homepage():
 
 ### /ac_status: The route for the Raspberry Pi
 
-This route only accepts POST requests. We will run code on the Pi to POST to this route every second with it's most up-to-date state information. 
+This route only accepts POST requests. We will run code on the Pi to POST to this route every second with its most up-to-date state information. 
 
 The function called in this route `update()` will take the info from the Pi, and store it in a sqlite database (using the `sqlite3` module in python). Check out `db.py` to see my database functions.
 
@@ -270,7 +272,7 @@ def switch_state():
 
 In order to make the program on the Pi as simple as possible, I've decided to represent what I want the air conditioner to be doing in three different states. **1: Completely and totally OFF. 2: Completely and totally ON. 3: Trying to maintain a particular temperature**
 
-Because state 3 requires a temperature, I've represented all the states as a dictionary of `{state number:?, temperature:?}`, where the temperature is the empty string if we have state 1 or 2, or an integer (converted to a string) in farenheit for state 3. 
+Because state 3 requires a temperature, I've represented all the states as a dictionary of `{state number:?, temperature:?}`, where the temperature is the empty string if we have state 1 or 2, or an integer (converted to a string) in fahrenheit for state 3. 
 
 ~~~~~~
 #initialize desired_state to a dictionary 
@@ -310,7 +312,7 @@ UI design was decidedly *not* the focus of this project, and I'd love suggestion
 
 Now that we have our server, we can flesh out the code that's going to run on the pi. 
 
-So far, we have some functions that allow us to read from the temperature sensor (I've added one that just returns the temperature in farenheit), and we've imported the `RPi-GPIO` library and set up our switch pin. I've also added a function to read off the value of the switch pin, so we know whether power is flowing to our AC or not.
+So far, we have some functions that allow us to read from the temperature sensor (I've added one that just returns the temperature in fahrenheit), and we've imported the `RPi-GPIO` library and set up our switch pin. I've also added a function to read off the value of the switch pin, so we know whether power is flowing to our AC or not.
 
 ~~~~~~
 import RPi.GPIO as io
@@ -365,7 +367,7 @@ Now, we'll just add two more main functions to this program. One to make POST re
 
 ## POST requests to the server
 
-This is the 'hey, server!' function. In the main loop of our program, we'll call it every second. The Raspberry pi will POST it's current state to the server, and the server will respond with the desired state from the user. We can then pass this information off to a different function that will decide what to do with the information.
+This is the 'hey, server!' function. In the main loop of our program, we'll call it every second. The Raspberry pi will POST its current state to the server, and the server will respond with the desired state from the user. We can then pass this information off to a different function that will decide what to do with the information.
 
 First, install and import the python [Requests](http://docs.python-requests.org/en/latest/) library.
 
