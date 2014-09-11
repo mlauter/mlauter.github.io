@@ -306,6 +306,7 @@ I've added login and logout routes to my final server program. I'm not going to 
 You'll need some pages for these routes to return. To start out, I recommend just using some plain HTML, and later, you can add onto it with some javascript and CSS to make the UI better. I'm using some jQuery and CSS Bootstrap. My HTML templates are [here](https://github.com/mlauter/RemoteAC/tree/master/app/templates), js is [here](https://github.com/mlauter/RemoteAC/blob/master/app/static/on_off.js).
 
 UI design was decidedly *not* the focus of this project, and I'd love suggestions for making it better:
+
 ![UI](../images/ac_website.png) 
  
 # Part III: The Raspberry Pi program
