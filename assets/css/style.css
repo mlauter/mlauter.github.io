@@ -1,0 +1,80 @@
+body {
+    font-family: 'Fira Mono', monospace;
+    margin: 0;
+    padding: 0;
+    display: block;
+    background: #fcddd5;
+    background: -webkit-linear-gradient(140deg,#fdffff,#fcddd5);
+    background: -o-linear-gradient(140deg,#fdffff,#fcddd5);
+    background: -moz-linear-gradient(140deg,#fdffff,#fcddd5);
+    background: linear-gradient(140deg,#fdffff,#fcddd5);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body, html {
+    height: 100%;
+}
+
+.content {
+    height: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    align-items: center;
+    min-height: 355px;
+}
+
+.content p {
+    color: #2a0800;
+    margin: 0 auto 20px;
+    line-height: 35px;
+}
+
+.content a {
+    color: #b10f2e;
+    font-weight: 700;
+    text-decoration: none;
+    padding-bottom: 1px;
+}
+
+.content a:not(.icon-fallback-glyph):hover {
+    text-decoration: underline;
+}
+
+::selection {
+    background: #7cffcb;
+    text-shadow: none;
+}
+
+.content .icon-fallback-glyph .text {
+    display: none;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-size: 200%;
+}
+
+@media all and (max-width: 639px) {
+    .content p {
+        font-size: 14px;
+        text-align: left;
+        width: 85%
+    }
+}
+
+@media all and (min-width: 640px) and (max-width: 899px) {
+    .content p {
+        font-size: 18px;
+        text-align: justify;
+        width: 65%;
+    }
+}
+
+@media all and (min-width: 900px) {
+    .content p {
+        font-size: 18px;
+        text-align: justify;
+        width: 45%;
+    }
+}
