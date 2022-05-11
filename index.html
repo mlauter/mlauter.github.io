@@ -1,66 +1,56 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link type="text/css" rel="stylesheet" href="assets/css/normalize.css"/>
-    <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
-    <link type="text/css" rel="stylesheet" href="assets/css/fontello.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
-    <title>Miriam Lauter</title>
-    <meta name="description" content="i like to write code"/>
-    <meta name="keywords" content="Miriam Lauter, NYC, New York, Etsy, Software,
-                                   Software Engineer, Programmer, Software Developer, SRE, DevOps, Digital, Homepage, Home, Website, Personal, Yale University">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
-    <meta name="theme-color" content="#fdffff" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132052303-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-132052303-1');
-    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>i am miriam</title>
+    <meta name="description" content="miriam writes code">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/index.css">
+    <meta name="theme-color" content="#F5DF4D">
   </head>
+  <head>
   <body>
-    <div class="content">
-      <div>
-        <p>
-          hi i'm miriam. i'm a staff software engineer at <a href="https://secure.actblue.com/">ActBlue</a> where I work on the donation experience.
-        </p>
-        <p>
-          previously, I worked on data and cloud infrastructure at <a target="_blank" href="https://www.etsy.com/people/miriamgl">Etsy</a>.
-          here's my <a target="_blank" href="assets/doc/resume.pdf?v4">resume</a>.
-        </p>
-        <p>
-          i'm also a <a target="_blank" href="https://www.recurse.com">Recurse Center</a> alum. you can check out some of my projects on my <a target="_blank" href="https://mlauter.github.io/rcblog">rc blog</a>.
-        </p>
-        <p>
-          you can find me on <a target="_blank" href="https://twitter.com/miriamlauter">twitter</a>, or just enjoy this picture of <a target="_blank" href="assets/img/pig.png">my cat</a>, pig.
-        </p>
+    <a href="#main" class="sr-only skip-link">Skip to content</a>
+    <header role="banner">
+      <div class="nav-wrapper">
+        <nav role="navigation" tabindex="-1">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Cat pic</a></li>
+          </ul>
+        </nav>
+        <div>hold</div>
       </div>
-      <div>
-        <a class="icon-fallback-glyph" target="_blank" href="https://github.com/mlauter" title="github">
-          <i class="icon-github-circled" aria-hidden="true"></i>
-          <span class="text">Github</span>
-        </a>
-        <a class="icon-fallback-glyph" target="_blank" href="https://twitter.com/miriamlauter" title="twitter">
-          <i class="icon-twitter" aria-hidden="true"></i>
-          <span class="text">Twitter</span>
-        </a>
-        <a class="icon-fallback-glyph" target="_blank" href="https://www.linkedin.com/in/miriamgl" title="linkedin">
-          <i class="icon-linkedin" aria-hidden="true"></i>
-          <span class="text">LinkedIn</span>
-        </a>
-        <a class="icon-fallback-glyph" target="_blank" href="assets/doc/resume.pdf?v4" title="resume">
-          <i class="icon-file-pdf" aria-hidden="true"></i>
-          <span class="text">Resume</span>
-        </a>
-      </div>
-    </div>
+    </header>
+    <main id="main" role="main" tabindex="-1">
+      <section id="intro">
+        <div class="wrapper"><h1><span class="greeting">hi, i am</span><span>> </span>miriam<span class="dot">.</span></h1></div>
+        <h2>I write code</h2>
+      </section>
+      <section id="about">
+        <ul>
+          <li>I'm a staff software engineer at
+            <a href="https://secure.actblue.com/donate/abortionfund">ActBlue</a> where I work on the donation experience
+          </li>
+          <li>Previously, I I worked on data and cloud infrastructure
+            <a href="https://www.etsy.com/">Etsy</a>.
+          </li>
+          <li>I've also worked on payments and credit card processing systems.</li>
+          <li>I spent the first part of my career working on the backend,
+            but lately, I've been working on the frontend.
+            I love learning new things.
+          </li>
+          <li>I'm also a <a href="https://www.recurse.com/">Recurse Center</a> alum.
+            I wrote a <a href="https://mlauter.github.io/rcblog">blog</a> about some of my projects
+            as I taught myself to code.
+          </li>
+        </ul>
+      </section>
+    </main>
   </body>
+  <footer><span>_</span><i class="fa-brands fa-github"></i></footer>
 </html>
