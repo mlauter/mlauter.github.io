@@ -130,24 +130,22 @@ li, p {
 /* about styles */
 #about ul {
   padding-left: 0.5rem;
+  margin-bottom: 0;
 }
 #about ul li {
   padding-left: 4px;
   margin-bottom: 1rem;
+}
+#about ul li:last-child {
+  margin-bottom: 0;
 }
 #about ul li::marker{
   content: ">";
   font-weight: var(--font-weight-bold);
 }
 
-/* footer */
-footer {
-  padding-bottom: 1rem;
-}
-
-footer span {
-  font-weight: var(--font-weight-semi-bold);
-  font-size: var(--font-size-md);
+#about #list-end {
+  font-weight: var(--font-weight-bold);
 }
 
 /* nav styles */
@@ -190,4 +188,24 @@ nav ul {
   white-space: nowrap;
   width: 1px;
 }
+
+/* footer styles */
+footer {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+#social-links ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+
 
