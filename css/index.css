@@ -70,12 +70,22 @@ a {
   background: linear-gradient(to right, var(--yellow-400) 50%, var(--black) 50%);
   background-size: 201% 100%;
   background-position:right bottom;
+  padding: 2px;
 }
 
 a:hover {
   background-position: left bottom;
   color: var(--black);
   transition: all 0.1s ease;
+}
+
+a:active {
+  background: var(--black);
+}
+
+a:focus {
+  border: 1px solid var(--yellow-400);
+  padding: 1px;
 }
 
 li, p {
@@ -170,7 +180,12 @@ nav ul {
   gap: 2rem;
 }
 
-.sr-only {
+nav a {
+  display: block;
+}
+
+/* font-awesome css has its own sr-only styles */
+.x-sr-only {
   position: absolute;
 }
 .skip-link {
@@ -179,7 +194,7 @@ nav ul {
   top: 0;
   font-size: var(--font-size-xs);
 }
-.sr-only:not(:focus):not(:active) {
+.x-sr-only:not(:focus):not(:active) {
   position: absolute;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
