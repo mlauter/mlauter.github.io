@@ -6,7 +6,8 @@
     --font-size-xs: 1rem;
     --font-size-sm: 1.2rem;
     --font-size-md: 2rem;
-    --font-size-lg: 3rem;
+    --font-size-lg: 2.5rem;
+    --font-size-mob-xl: 4rem;
     --font-size-xl: 5rem;
     --font-weight-reg: 400;
     --font-weight-semi-bold: 500;
@@ -43,24 +44,9 @@ h1,h2,h3 {
 
 h1 {
   font-size: var(--font-size-xl);
-
 }
 h2 {
   font-size: var(--font-size-lg);
-}
-@media (max-width: 480px) {
-  h1 {
-    font-size: 8rem;
-  }
-  h2 {
-    font-size: 5rem;
-  }
-  #intro h1 {
-    padding-bottom: 5rem;
-  }
-  #intro h1 .greeting {
-    padding-bottom: 5rem;
-  }
 }
 
 a {
@@ -103,7 +89,6 @@ li, p {
 }
 
 #intro h1 {
-  /* font-size: min(2, 5); */
   font-weight: var(--font-weight-bold);
   background: transparent;
   padding-right: 14rem;
@@ -221,6 +206,29 @@ footer {
   gap: 1rem;
 }
 
+/** responsive */
+@media (max-width: 840px) {
+  h1 {
+    font-size: var(--font-size-mob-xl);
+  }
+}
 
+@media (max-width: 600px) {
+  body {
+    margin: 0 1rem;
+  }
 
+  header {
+    padding: 3rem 0 1rem;
+  }
+}
 
+@media (max-width: 480px) {
+  #intro .wrapper {
+    border: 1px solid var(--yellow-400);
+    border-radius: var(--border-radius);
+    padding-left: 1rem;
+    max-width: 50rem;
+    min-width: 400px;
+  }
+}
